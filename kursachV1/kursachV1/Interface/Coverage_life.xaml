@@ -1,0 +1,215 @@
+﻿<Window x:Class="kursachV1.Interface.Coverage_life"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Страхование жизни" MinHeight="330" MinWidth="1080" MaxHeight="800" MaxWidth="1150"   Width="1100"  Height="1000" Activated="Window_Activated">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/ShinyBlue.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid >
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0.1" Color="CadetBlue" />
+                    <GradientStop Offset="0.4" Color="Cornsilk" />
+                    <GradientStop Offset="1" Color="DarkRed" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button MinWidth="100" MaxWidth="140"  MinHeight="34" MaxHeight="100" HorizontalAlignment="Left" Margin="3" Click="Button_Click">Klient</Button>
+            <Label x:Name="Ndog" MinWidth="100" MaxWidth="140" Margin="110,0,0,0" MaxHeight="30"  MinHeight="24" HorizontalAlignment="Left" Background="AntiqueWhite" >Номер договора</Label>
+            <Label x:Name="Ndog2" MinWidth="10" MaxWidth="40" Margin="210,0,0,0" MaxHeight="30"  MinHeight="24" HorizontalAlignment="Left" Background="AntiqueWhite" ></Label>
+            <StackPanel Margin="3" Grid.ColumnSpan="5"  >
+                <TextBlock   Margin="3" HorizontalAlignment="Center" FontSize="14" >  
+            Программа подбора условий договора страхования по правилам №1</TextBlock >
+            </StackPanel>
+            <Border Grid.ColumnSpan="5" Margin="3" Padding="5" BorderBrush="Black" BorderThickness="1,2,1,2" CornerRadius="3"></Border>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock  HorizontalAlignment="Right" VerticalAlignment= "Top">Количество взносо в году</TextBlock>
+                <TextBox x:Name="KolVznos" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TextChacheg_13" MinWidth="110" MaxWidth="120" MaxHeight="25" IsEnabled="False" ></TextBox>
+                <TextBlock  HorizontalAlignment="Right" VerticalAlignment="Center">Норма доходности:</TextBlock>
+                <TextBox x:Name="NormaDox" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="110" MaxWidth="120" MaxHeight="25" TextChanged="NormaDox_TextChanged" ></TextBox>
+                <TextBlock  HorizontalAlignment="Right" VerticalAlignment= "Bottom">Нагрузка:</TextBlock>
+                <TextBox x:Name="Nagryzka" Grid.Column="1" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Bottom" MinWidth="110" MaxWidth="120" MaxHeight="25" TextChanged="Nagryzka_TextChanged" ></TextBox>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Right" Margin="10">Номер_ставки</TextBlock>
+                <TextBox x:Name="Nstavka" Grid.Row="1" Margin="10" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" MinWidth="100" MaxHeight="25" IsEnabled="False">1</TextBox>
+                <Button Grid.Column="1" Grid.Row="4" Margin="3" MaxHeight="23" MaxWidth="130" RenderTransformOrigin="0.542,0.5" HorizontalAlignment="Right" Click="Button_Click_3">Обновление данных</Button>
+                <Button Grid.Column="1" Grid.Row="4" Margin="3" MaxHeight="23" MaxWidth="130" RenderTransformOrigin="0.542,0.5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Button_Click_OBR">Выбрать данные</Button>
+                <Button Grid.Column="1" Grid.Row="4" Margin="3" MaxHeight="23" MaxWidth="130" RenderTransformOrigin="0.542,0.5" HorizontalAlignment="Left" Click="Button_Click_YD">Удаление данных</Button>
+
+                <Button Grid.Column="0" Grid.Row="4" Margin="3,-20,0,0" MaxHeight="23" MaxWidth="130" RenderTransformOrigin="0.542,0.5" Click="Button_Click_1">Добавить данные</Button>
+               
+
+                <Button  Grid.Column="0" Grid.Row="4" VerticalAlignment="Bottom" Margin="0,0,240,3" MaxHeight="23" MaxWidth="130" RenderTransformOrigin="0.542,0.5" Click="Clickdogovor">Договор</Button>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="31*"></RowDefinition>
+                    <RowDefinition Height="31*"></RowDefinition>
+                    <RowDefinition Height="26*"></RowDefinition>
+                    <RowDefinition Height="31*"></RowDefinition>
+                    <RowDefinition Height="26*"></RowDefinition>
+                    <RowDefinition Height="26*"></RowDefinition>
+                    <RowDefinition Height="26*"></RowDefinition>
+                    <RowDefinition Height="31*"></RowDefinition>
+                    <RowDefinition Height="26*"></RowDefinition>
+                    <RowDefinition Height="32*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock  HorizontalAlignment="Right" >Пол:</TextBlock>
+                <TextBlock  Grid.Row="1" HorizontalAlignment="Right" >Валюта:</TextBlock>
+                <TextBlock  Grid.Row="2" HorizontalAlignment="Right" >Возраст:</TextBlock>
+                <TextBlock  Grid.Row="3" HorizontalAlignment="Right" >Срок страхования:</TextBlock>
+                <TextBlock  Grid.Row="4" HorizontalAlignment="Right" >Страховой взнос:</TextBlock>
+                <TextBlock  Grid.Row="5" HorizontalAlignment="Right" >Курс (валюты):</TextBlock>
+                <TextBlock  Grid.Row="6" HorizontalAlignment="Right" >Налоговый вычет:</TextBlock>
+                <TextBlock  Grid.Row="7" HorizontalAlignment="Right" >Периодичность уплаты взноса:</TextBlock>
+                <TextBlock  Grid.Row="8" HorizontalAlignment="Right" >Сумма страхового взноса:</TextBlock>
+                <TextBlock  Grid.Row="9" HorizontalAlignment="Right" TextWrapping="Wrap" MaxWidth="300"  >Прогнозируемый бонус за первый год действия договора страхования:</TextBlock>
+                <ComboBox x:Name="pol" Margin="3" Grid.Column="1" HorizontalAlignment="Left" MinHeight="25" MinWidth="90" MaxWidth="100" DropDownClosed="pol_DropDownClosed" IsEnabled="False"></ComboBox>
+                <ComboBox x:Name="Valyta" Margin="3" Grid.Row="1" HorizontalAlignment="Left" Grid.Column="1" MinHeight="25" MinWidth="100" MaxWidth="150" DropDownClosed="Valyta_DropDownClosed">
+                    <ComboBoxItem>Белорусские рубли</ComboBoxItem>
+                    <ComboBoxItem>Иностранная валюта</ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="let" Margin="3" Grid.Row="2" Grid.Column="1" MinHeight="20"  HorizontalAlignment="Left" MinWidth="100" MaxWidth="150" IsEnabled="False" ></TextBox>
+                <ComboBox x:Name="Godrag" Margin="3" Grid.Column="1"  Grid.Row="3" HorizontalAlignment="Left" MinHeight="25" MinWidth="90" MaxWidth="100"></ComboBox>
+                <TextBox x:Name="Straxov_vznos" Margin="3"  Grid.Row="4" TextChanged="TextChanged_12" Grid.Column="1" MinHeight="20" HorizontalAlignment="Left" MinWidth="100" MaxWidth="150"></TextBox>
+                <TextBox x:Name="Kyrs_val" Margin="3"  Grid.Row="5" Grid.Column="1" MinHeight="20" HorizontalAlignment="Left" MinWidth="100" MaxWidth="150" TextChanged="Kyrs_val_TextChanged">0</TextBox>
+                <TextBox x:Name="Nalog_vichat" Margin="3"  Grid.Row="6" Grid.Column="1" MinHeight="20" HorizontalAlignment="Left" MinWidth="100" MaxWidth="150" IsEnabled="False"></TextBox>
+                <ComboBox x:Name="Period" Margin="3" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" MinHeight="25" MinWidth="100" MaxWidth="150" DropDownClosed="Period_DropDownClosed">
+                    <ComboBoxItem>единовременно</ComboBoxItem>
+                    <ComboBoxItem>ежегодно</ComboBoxItem>
+                    <ComboBoxItem>ежемесячно</ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="Symma_str_vznosa" Margin="3"  Grid.Row="8" Grid.Column="1" MinHeight="20" HorizontalAlignment="Left" MinWidth="100" MaxWidth="150" TextChanged="Text_changed34" IsEnabled="False"/>
+                <TextBox x:Name="Bonys" Margin="3"  Grid.Row="9" Grid.Column="1" MinHeight="20" HorizontalAlignment="Left" MinWidth="100" MaxWidth="150" IsEnabled="False"></TextBox>
+            </Grid>
+            <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock  Grid.RowSpan="2" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Right" MaxWidth="60" TextWrapping="Wrap" >Вариант договора</TextBlock>
+                <TextBlock  Grid.RowSpan="2" Grid.Column="8" Margin="3"  VerticalAlignment="Center" HorizontalAlignment="Left"  MaxWidth="60" TextWrapping="Wrap" >Тариф</TextBlock>
+                <TextBlock  Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="70" TextWrapping="Wrap" >дожития до окончания действия договора</TextBlock>
+                <TextBlock  Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="70" TextWrapping="Wrap" >смерти от ДТП</TextBlock>
+                <TextBlock  Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="70" TextWrapping="Wrap" >смерти от несчаст- ного случая</TextBlock>
+                <TextBlock  Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="70" TextWrapping="Wrap" >смерти по естествен- ной причине</TextBlock>
+                <TextBlock  Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="100" TextWrapping="Wrap" >получения I группы инвалид- ности</TextBlock>
+                <TextBlock  Grid.Row="1" Grid.Column="6" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="100" TextWrapping="Wrap" >получения II группы инвалид- ностиа</TextBlock>
+                <TextBlock  Grid.Row="1" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="100" TextWrapping="Wrap" >получения III группы инвалид- ности</TextBlock>
+                <TextBlock  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="7" TextWrapping="Wrap" >Страховая выплата в случае</TextBlock>
+                <TextBlock  Grid.Row="2" VerticalAlignment="Center" MaxWidth="60" HorizontalAlignment="Right" TextWrapping="Wrap" Margin="3" >01_01</TextBlock>
+                <TextBlock  Grid.Row="3" VerticalAlignment="Center" MaxWidth="60" HorizontalAlignment="Right" TextWrapping="Wrap" Margin="3"  >01_02</TextBlock>
+                <TextBlock  Grid.Row="4" VerticalAlignment="Center" MaxWidth="60" HorizontalAlignment="Right" TextWrapping="Wrap" Margin="3" >01_03</TextBlock>
+                <TextBlock  Grid.Row="5" VerticalAlignment="Center" MaxWidth="60" HorizontalAlignment="Right" TextWrapping="Wrap" Margin="3" >01_04</TextBlock>
+                <TextBlock  Grid.Row="6" VerticalAlignment="Center" MaxWidth="60" HorizontalAlignment="Right" TextWrapping="Wrap" Margin="3" >01_05</TextBlock>
+                <TextBox  x:Name="dogid_01_05" Grid.Row="6" Grid.Column="1" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="dogid_01_04" Grid.Row="5" Grid.Column="1" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="dogid_01_03" Grid.Row="4" Grid.Column="1" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="dogid_01_02" Grid.Row="3" Grid.Column="1" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="dogid_01_01" Grid.Row="2" Grid.Column="1" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="dtp_01_05" Grid.Row="6" Grid.Column="2" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="dtp_01_04" Grid.Row="5" Grid.Column="2" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  Grid.Row="4" Grid.Column="2" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+                <TextBox  x:Name="dtp_01_02" Grid.Row="3" Grid.Column="2" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="dtp_01_01" Grid.Row="2" Grid.Column="2" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="smerti_01_05" Grid.Row="6" Grid.Column="3" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="smerti_01_03" Grid.Row="4" Grid.Column="3" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="smerti_01_02" Grid.Row="3" Grid.Column="3" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="smerti_01_01" Grid.Row="2" Grid.Column="3" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  Grid.Row="4" Grid.Column="4" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+                <TextBox  Grid.Row="5" Grid.Column="4" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+                <TextBox  Grid.Row="6" Grid.Column="4" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+                <TextBox x:Name="smertie_01_02" Grid.Row="3" Grid.Column="4" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="smertie_01_01" Grid.Row="2" Grid.Column="4" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  Grid.Row="5" Grid.Column="3" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+
+                <TextBox x:Name="inv1_01_04" Grid.Row="5" Grid.Column="5" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="inv1_01_05" Grid.Row="6" Grid.Column="5" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="inv2_01_03" Grid.Row="4" Grid.Column="6" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="inv1_01_03" Grid.Row="4" Grid.Column="5" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="inv2_01_02" Grid.Row="3" Grid.Column="6" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="inv1_01_02" Grid.Row="3" Grid.Column="5" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  Grid.Row="2" Grid.Column="5" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+                <TextBox  x:Name="inv2_01_04" Grid.Row="5" Grid.Column="6" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="inv2_01_05" Grid.Row="6" Grid.Column="6" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  Grid.Row="2" Grid.Column="6" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+                <TextBox  x:Name="inv3_01_04" Grid.Row="5" Grid.Column="7" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="inv3_01_05" Grid.Row="6" Grid.Column="7" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+
+                <TextBox  x:Name="inv3_01_03" Grid.Row="4" Grid.Column="7" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="inv3_01_02" Grid.Row="3" Grid.Column="7" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  Grid.Row="2" Grid.Column="7" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">-</TextBox>
+                <TextBox  x:Name="tarif_01_04" Grid.Row="5" Grid.Column="8" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox  x:Name="tarif_01_05" Grid.Row="6" Grid.Column="8" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+
+                <TextBox x:Name="tarif_01_01" Grid.Row="2" Grid.Column="8" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="tarif_01_02" Grid.Row="3" Grid.Column="8" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <TextBox x:Name="tarif_01_03" Grid.Row="4" Grid.Column="8" TextAlignment="Center" MaxWidth="110" MaxHeight="25" IsEnabled="False">0</TextBox>
+                <Border Grid.ColumnSpan="7" Grid.Column="1"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="2"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="2" Grid.Column="8"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.Row="2"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.Row="3"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.Row="4"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.Row="5"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.Row="6"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="1"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="2"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="3"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="4"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="5"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="6"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="7"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border Grid.RowSpan="5" Grid.Row="2"  Grid.Column="8"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border  Grid.Row="1"  Grid.Column="1"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border  Grid.Row="1"  Grid.Column="2"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border  Grid.Row="1"  Grid.Column="3"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border  Grid.Row="1"  Grid.Column="4"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border  Grid.Row="1"  Grid.Column="5"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border  Grid.Row="1"  Grid.Column="6"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+                <Border  Grid.Row="1"  Grid.Column="7"  Padding="5" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="1"></Border>
+            </Grid>
+        </Grid>
+
+    </ScrollViewer>
+</Window>
