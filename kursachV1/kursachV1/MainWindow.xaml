@@ -3,7 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindowt" Height="350" Width="525">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="412,271,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="quitButton" Content="Выход" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Width="83" Height="32" RenderTransformOrigin="-1.285,-0.492" Click="quitButton_Click"/>
+        <Button x:Name="docButton" Content="Оформление договоров" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="174" Height="41"/>
+        <Button x:Name="stavkaButton" Content="Ставки" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Width="123" Height="35"/>
+        <Button x:Name="othersButton" Content="Прочее" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="123" Height="32"/>
+        <Button x:Name="settingButton" Content="Настройки" HorizontalAlignment="Left" Height="32" Margin="438,279,0,0" VerticalAlignment="Top" Width="70"/>
 
 
     </Grid>
