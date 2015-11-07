@@ -24,5 +24,11 @@ namespace kursachV1
         {
             InitializeComponent();
         }
+
+        private void quitButton_Click(object sender, RoutedEventArgs e)
+        {
+            //добавить запрос на подтверждение
+            this.Close();
+        }
     }
 }
