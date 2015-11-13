@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursachV1.Frame;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,12 @@ namespace kursachV1
         {
             //добавить запрос на подтверждение
             this.Close();
+        }
+
+        private void docButton_Click(object sender, RoutedEventArgs e)
+        {
+            menuFrame.Content = null;
+            menuFrame.NavigationService.Navigate(new Uri("/Frame/Dogovor.xaml", UriKind.Relative));
         }
     }
 }

@@ -30,7 +30,7 @@ namespace kursachV1.Interface
         public Coverage_life()
         {
             InitializeComponent();
-            if (Sotryd._count == 2)
+          /*  if (Sotryd._count == 2)
             {
 
                 Straxov_vznos.IsEnabled = false;
@@ -43,10 +43,12 @@ namespace kursachV1.Interface
                 pol.Items.Add(i);
             sc = new SqlConnection(Sotryd.myConnectionString);
            // sc = new SqlConnection(@"Data Source=PC-Maverick;Initial Catalog=Pro100;Integrated Security=True");
-            sc.Open();
+            sc.Open();*/
         }
 
-        public Klient Klient
+
+
+     /*   public spisok_rechetov_gizni spisok_rechetov_gizni
         {
             get
             {
@@ -55,22 +57,11 @@ namespace kursachV1.Interface
             set
             {
             }
-        }
-
-        public spisok_rechetov_gizni spisok_rechetov_gizni
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        }*/
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            DateTime d1 = DateTime.Now;
+           /* DateTime d1 = DateTime.Now;
             foreach (string j in installs2)
                 if (j == Klient2.Kpol)
                     pol.SelectedItem = j;
@@ -110,13 +101,13 @@ namespace kursachV1.Interface
                 }
            
            
-            }
+            }*/
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button cmd = (Button)e.OriginalSource;
+        /*    Button cmd = (Button)e.OriginalSource;
 
             // Create an instance of the window named
             // by the current button.
@@ -136,12 +127,12 @@ namespace kursachV1.Interface
                     pol.SelectedItem = j;
 
             Ndog2.Content = Klient2.Ndogovor.ToString();
-            this.Close();
+            this.Close();*/
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            try
+         /*   try
             {
                 LifeInsurance life = new LifeInsurance();
                 life._Valyta = Convert.ToString(Valyta.SelectionBoxItem);
@@ -163,12 +154,12 @@ namespace kursachV1.Interface
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            try
+           /* try
             {
                 LifeInsurance life = new LifeInsurance();
                 life._Valyta = Convert.ToString(Valyta.SelectionBoxItem);
@@ -190,7 +181,7 @@ namespace kursachV1.Interface
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void TextChanged_12(object sender, TextChangedEventArgs e)
@@ -471,8 +462,8 @@ namespace kursachV1.Interface
 
         private void Button_Click_YD(object sender, RoutedEventArgs e)
         {
-            LifeInsurance life = new LifeInsurance();
-            life.DeleteLife();
+         /*   LifeInsurance life = new LifeInsurance();
+            life.DeleteLife();*/
         }
 
         private void Period_DropDownClosed(object sender, EventArgs e)
@@ -546,9 +537,9 @@ namespace kursachV1.Interface
 
         private void Button_Click_OBR(object sender, RoutedEventArgs e)
         {
-            spisok_rechetov_gizni ras = new spisok_rechetov_gizni();
+            /*spisok_rechetov_gizni ras = new spisok_rechetov_gizni();
             ras.Show();
-            this.Close();
+            this.Close();*/
         }
 
         private void Clickdogovor(object sender, RoutedEventArgs e)

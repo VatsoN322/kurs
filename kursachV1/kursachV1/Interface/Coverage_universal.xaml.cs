@@ -29,7 +29,7 @@ namespace kursachV1.Interface
         string[] installs2 = new string[] { "Мужчины", "Женщины" };
         public Coverage_universal()
         {
-            InitializeComponent();
+         /*   InitializeComponent();
             if (Sotryd._count == 2)
             {
 
@@ -58,10 +58,11 @@ namespace kursachV1.Interface
             Vred_zdarov.IsEnabled = false;
             sc = new SqlConnection(Sotryd.myConnectionString);
            // sc = new SqlConnection(@"Data Source=PC-Maverick;Initial Catalog=Pro100;Integrated Security=True");
-            sc.Open();
+            sc.Open();*/
         }
 
-        public Klient Klient
+
+       /* public spisok_vznosov_vzroslix spisok_vznosov_vzroslix
         {
             get
             {
@@ -70,9 +71,9 @@ namespace kursachV1.Interface
             set
             {
             }
-        }
+        }*/
 
-        public spisok_vznosov_vzroslix spisok_vznosov_vzroslix
+     /*   public spisok_raschetov_vzrosl spisok_raschetov_vzrosl
         {
             get
             {
@@ -81,18 +82,7 @@ namespace kursachV1.Interface
             set
             {
             }
-        }
-
-        public spisok_raschetov_vzrosl spisok_raschetov_vzrosl
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        }*/
 
         private void Godrag_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -231,7 +221,7 @@ namespace kursachV1.Interface
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            try
+        /*    try
             {
                 data.Text = Klient2.day.ToString();
                 month.Text = Klient2.month.ToString();
@@ -334,12 +324,12 @@ namespace kursachV1.Interface
                     Dost_voz.Text = s1;
                 }
             }
-            catch { }
+            catch { }*/
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button cmd = (Button)e.OriginalSource;
+           /* Button cmd = (Button)e.OriginalSource;
 
             // Create an instance of the window named
             // by the current button.
@@ -362,7 +352,7 @@ namespace kursachV1.Interface
                     pol.SelectedItem = j;
 
             Ndog2.Content = Klient2.Ndogovor.ToString();
-            this.Close();
+            this.Close();*/
 
         }
 
@@ -730,7 +720,7 @@ namespace kursachV1.Interface
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            DateTime d1 = DateTime.Now;
+          /*  DateTime d1 = DateTime.Now;
             int god = Convert.ToInt32(d1.Year) - Convert.ToInt32(Godrag.SelectedItem);
             string ld;
             string ld2;
@@ -763,7 +753,7 @@ namespace kursachV1.Interface
             catch(Exception ex)
             {
                 MessageBox.Show("Неправильно внесены данные" + ex.Message);
-            }
+            }*/
         }
 
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
@@ -815,7 +805,7 @@ namespace kursachV1.Interface
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            DateTime d1 = DateTime.Now;
+        /*    DateTime d1 = DateTime.Now;
             int god = Convert.ToInt32(d1.Year) - Convert.ToInt32(Godrag.SelectedItem);
             string ld;
             string ld2;
@@ -872,13 +862,13 @@ namespace kursachV1.Interface
                   s1 = Dost_voz.Text;
                   Dost_voz.Text = "0";
                   Dost_voz.Text = s1;
-              }
+              }*/
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
-               try
+             /*  try
             {
                    ContributionsOfAdults CoA = new ContributionsOfAdults();
                 CoA._kodvznos = Convert.ToInt32(Nvznosa.Text);
@@ -904,27 +894,27 @@ namespace kursachV1.Interface
                    s1 = Dost_voz.Text;
                    Dost_voz.Text = "0";
                    Dost_voz.Text = s1;
-               }
+               }*/
         }
 
         private void Button_Click_98(object sender, RoutedEventArgs e)
         {
-            spisok_vznosov_vzroslix vzros = new spisok_vznosov_vzroslix();
-            vzros.Show();
+            /*spisok_vznosov_vzroslix vzros = new spisok_vznosov_vzroslix();
+            vzros.Show();*/
 
         }
 
         private void Button_Click_YD(object sender, RoutedEventArgs e)
         {
-            InsuranceOfAdults IoA = new InsuranceOfAdults();
-            IoA.DeleteInsuranceOfAdults();
+           /* InsuranceOfAdults IoA = new InsuranceOfAdults();
+            IoA.DeleteInsuranceOfAdults();*/
 
         }
 
         private void Button_Click_YDV(object sender, RoutedEventArgs e)
         {
-            ContributionsOfAdults CoA = new ContributionsOfAdults();
-            CoA.DeleteContributionsOfAdults(Klient2.Nvznosa);
+           /* ContributionsOfAdults CoA = new ContributionsOfAdults();
+            CoA.DeleteContributionsOfAdults(Klient2.Nvznosa);*/
         }
 
         private void skidki_DropDownClosed(object sender, EventArgs e)
@@ -979,7 +969,7 @@ namespace kursachV1.Interface
 
         private void Dost_voz_TextChanged(object sender, TextChangedEventArgs e)
         {
-            try
+           /* try
             {
                 Klient2.Nvznosa = Convert.ToInt32(Nvznosa.Text);
                 if (skidki.SelectionBoxItem.ToString() != "" && Godrag.Text != "" && Period.SelectionBoxItem.ToString() != "" && pol.SelectionBoxItem.ToString() != "" && Valyta.Text != "" && Klient2.Nvznosa != 0)
@@ -1265,15 +1255,15 @@ namespace kursachV1.Interface
             catch
             {
                 MessageBox.Show("Неправильно внесены данные");
-            }
+            }*/
         }
 
         private void Button_Click_raschet(object sender, RoutedEventArgs e)
         {
-            spisok_raschetov_vzrosl ras = new spisok_raschetov_vzrosl();
+          /*  spisok_raschetov_vzrosl ras = new spisok_raschetov_vzrosl();
             ras.Show();
 
-            this.Close();
+            this.Close();*/
         }
 
      

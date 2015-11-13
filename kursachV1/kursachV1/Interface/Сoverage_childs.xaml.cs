@@ -32,7 +32,7 @@ namespace kursachV1.Interface
         public Сoverage_childs()
         {
             InitializeComponent();
-            if (Sotryd._count == 2)
+           /* if (Sotryd._count == 2)
             {
 
                 Dost_voz.IsEnabled = false;
@@ -53,10 +53,10 @@ namespace kursachV1.Interface
             Vred_zdarov.IsEnabled = false;
             sc = new SqlConnection(Sotryd.myConnectionString);
             //sc = new SqlConnection(@"Data Source=PC-Maverick;Initial Catalog=Pro100;Integrated Security=True");
-            sc.Open();
+            sc.Open();*/
         }
 
-        public spisok_vznosov_detei spisok_vznosov_detei
+       /* public spisok_vznosov_detei spisok_vznosov_detei
         {
             get
             {
@@ -65,9 +65,9 @@ namespace kursachV1.Interface
             set
             {
             }
-        }
+        }*/
 
-        public spisok_raschetov_deti spisok_raschetov_deti
+     /*   public spisok_raschetov_deti spisok_raschetov_deti
         {
             get
             {
@@ -76,22 +76,13 @@ namespace kursachV1.Interface
             set
             {
             }
-        }
+        }*/
 
-        public Klient Klient
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+     
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button cmd = (Button)e.OriginalSource;
+          /*  Button cmd = (Button)e.OriginalSource;
 
             // Create an instance of the window named
             // by the current button.
@@ -113,7 +104,7 @@ namespace kursachV1.Interface
                     pol.SelectedItem = j;
 
             Ndog2.Content =   Klient2.Ndogovor.ToString();
-            this.Close();
+            this.Close();*/
         }
 
         private void OnScroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
@@ -503,7 +494,7 @@ namespace kursachV1.Interface
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            DateTime d1 = DateTime.Now;
+          /*  DateTime d1 = DateTime.Now;
             int god = Convert.ToInt32(d1.Year) - Convert.ToInt32(Godrag.SelectedItem);
             string ld;
             string ld2;
@@ -558,12 +549,12 @@ namespace kursachV1.Interface
                 MessageBox.Show("Внесены изменения в таблицу Взносы детей" + ex.Message);
             }
 
-
+            */
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            try
+           /* try
             {
                 PaymentChildren pC = new PaymentChildren();
                 pC._kodvznos = Convert.ToInt32(Nvznosa.Text);
@@ -585,7 +576,7 @@ namespace kursachV1.Interface
             {
                 MessageBox.Show("Неправильно внесены данные для обновления" + ex.Message);
             }
-
+            */
         }
 
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
@@ -663,7 +654,7 @@ namespace kursachV1.Interface
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            try
+          /*  try
             {
                 DateTime d1 = DateTime.Now;
                 int god = Convert.ToInt32(d1.Year) - Convert.ToInt32(Godrag.SelectedItem);
@@ -693,13 +684,13 @@ namespace kursachV1.Interface
             catch(Exception ex)
             {
                 MessageBox.Show("Неправильно внесены данные обновлений" + ex.Message);
-            }
+            }*/
             
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            try
+          /*  try
             {
                 data.Text = Klient2.day.ToString();
                 month.Text = Klient2.month.ToString();
@@ -792,26 +783,26 @@ namespace kursachV1.Interface
                     Dost_voz.Text = s1;
                 }
             }
-            catch { }
+            catch { }*/
         }
 
         private void Button_Click_98(object sender, RoutedEventArgs e)
         {
-         spisok_vznosov_detei detp = new spisok_vznosov_detei();
-            detp.Show();
+        /* spisok_vznosov_detei detp = new spisok_vznosov_detei();
+            detp.Show();*/
         }
 
         private void Button_Click_raschet(object sender, RoutedEventArgs e)
         {
-            spisok_raschetov_deti ras = new spisok_raschetov_deti();
+            /*spisok_raschetov_deti ras = new spisok_raschetov_deti();
             ras.Show();
 
-            this.Close();
+            this.Close();*/
         }
 
         private void Changed_dos_voz(object sender, TextChangedEventArgs e)
         {
-            try{
+           /* try{
             Klient2.Nvznosa = Convert.ToInt32(Nvznosa.Text);
             if (skidki.SelectionBoxItem.ToString() != "" &&  Godrag.Text != "" && Period.SelectionBoxItem.ToString() != "" && pol.SelectionBoxItem.ToString() != "" && Valyta.Text != "" && Klient2.Nvznosa != 0)
             {
@@ -1021,22 +1012,22 @@ namespace kursachV1.Interface
           catch
             {
                 MessageBox.Show("Неправильно внесены данные");
-            }
+            }*/
         }
 
         private void Button_Click_YD(object sender, RoutedEventArgs e)
         {
-            InsuranceOfChildren IoC = new InsuranceOfChildren();
-            IoC.DeleteInsuranceOfChildren();
+           /* InsuranceOfChildren IoC = new InsuranceOfChildren();
+            IoC.DeleteInsuranceOfChildren();*/
             
         }
 
         private void Button_Click_YDV(object sender, RoutedEventArgs e)
         {
-            PaymentChildren pC = new PaymentChildren();
+          /*  PaymentChildren pC = new PaymentChildren();
 
             pC.DeletePaymentChildren(Klient2.Nvznosa);
-            
+            */
           
         }
 
