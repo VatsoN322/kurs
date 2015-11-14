@@ -56,8 +56,29 @@
     <Compile Include="Frame\Contract.xaml.cs">
       <DependentUpon>Contract.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Frame\Dogovor.xaml.cs">
-      <DependentUpon>Dogovor.xaml</DependentUpon>
+    <Compile Include="Frame\Others.xaml.cs">
+      <DependentUpon>Others.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\Reports.xaml.cs">
+      <DependentUpon>Reports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\Wages.xaml.cs">
+      <DependentUpon>Wages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Clients.xaml.cs">
+      <DependentUpon>Clients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Employees.xaml.cs">
+      <DependentUpon>Employees.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Wage.xaml.cs">
+      <DependentUpon>Wage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Wage_statistics.xaml.cs">
+      <DependentUpon>Wage_statistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Wage_universal.xaml.cs">
+      <DependentUpon>Wage_universal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Сoverage_childs.xaml.cs">
       <DependentUpon>Сoverage_childs.xaml</DependentUpon>
@@ -104,7 +125,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Frame\Dogovor.xaml">
+    <Page Include="Frame\Others.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Frame\Reports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Frame\Wages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Clients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Employees.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Wage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Wage_statistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\Wage_universal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

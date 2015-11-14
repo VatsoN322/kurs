@@ -1,0 +1,139 @@
+﻿<Window x:Class="kursachV1.Interface.Clients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Height="474.627" Width="560.597"
+        MaxHeight="475" MaxWidth="561"
+        MinHeight="473" MinWidth="560"
+	    Title="Клиент">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/ShinyBlue.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Margin="0,0,0,347" Grid.Column="1" Panel.ZIndex="1" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Right" MinWidth="70" MaxWidth="71"  Click="Button_Clic_Menu" Grid.ColumnSpan="2" BorderThickness="0" RenderTransformOrigin="0.535,-1.485">Возрат</Button>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="35"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="35" Height="Auto"></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="Общие данные" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" MinHeight="380" MinWidth="284" Grid.RowSpan="11" Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Row="1" Margin="20,10,0,0">Личный номер</TextBlock>
+            <TextBlock Grid.Row="2" Margin="20,10,0,0">Фамилия</TextBlock>
+            <TextBlock Grid.Row="3" Margin="20,10,0,0">Имя</TextBlock>
+            <TextBlock Grid.Row="4" Margin="20,10,0,0">Отчество</TextBlock>
+            <TextBlock Grid.Row="5" Margin="20,10,0,0" >Дата Рождения</TextBlock>
+
+            <TextBlock Grid.Row="6" Margin="20,10,0,0">Пол</TextBlock>
+            <TextBlock Grid.Row="7" Margin="20,10,0,0">Адрес</TextBlock>
+            <TextBlock Grid.Row="8" Margin="20,10,0,0">Электронный Адрес</TextBlock>
+            <TextBlock Grid.Row="9" Margin="20,10,0,0">Мобильный телефон +375</TextBlock>
+            <TextBlock Grid.Row="10" Margin="20,10,0,0">Домашний телефон </TextBlock>
+            <TextBox x:Name="dogovor" Grid.Row="1" Grid.Column="1" MinWidth="80" MaxHeight="18" MaxWidth="110" Margin="0,0,10,0"></TextBox>
+            <TextBox x:Name="fam" Grid.Row="2" Grid.Column="1" MinWidth="80" MaxHeight="18" MaxWidth="110" Margin="0,0,10,0"></TextBox>
+            <TextBox x:Name="name" Grid.Row="3" Grid.Column="1" MinWidth="80" MaxHeight="18" MaxWidth="110" Margin="0,0,10,0"></TextBox>
+            <TextBox x:Name="otch" Grid.Row="4" Grid.Column="1" MinWidth="80" MaxHeight="18" MaxWidth="110" Margin="0,0,10,0"></TextBox>
+            <DatePicker x:Name="datarog" Grid.Row="5" Grid.Column="1" MinWidth="80" MaxHeight="25"  Margin="0,0,10,0" DateValidationError="DatePicker_DateValidationError" ></DatePicker>
+            <ComboBox x:Name="pol" Grid.Row="6" Grid.Column="1" MinWidth="80" MaxHeight="20" Margin="0,0,10,0" MaxWidth="110" >
+                <ComboBoxItem>
+                    Мужчины
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    Женщины
+                </ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="addres" Grid.Row="7" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,0,10,0" MaxWidth="110"></TextBox>
+            <TextBox x:Name="Eladdres" Grid.Row="8" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,0,10,0" MaxWidth="110"></TextBox>
+            <TextBox x:Name="telef" Grid.Row="9" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,0,10,0" MaxWidth="110">
+                <TextBox.ToolTip>
+                    +375 ХХ xxx-xx-xx формат телефона
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="telefDom" Grid.Row="10" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,0,10,0" MaxWidth="110">
+                <TextBox.ToolTip>
+                    xx-xx-xx формат телефона
+                </TextBox.ToolTip>
+            </TextBox>
+        </Grid>
+        <Grid Grid.Column="1" Margin="0,0,0,127">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="25"></RowDefinition>
+                <RowDefinition MinHeight="25" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="25" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="25" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="25" Height="Auto"></RowDefinition>
+                <RowDefinition MinHeight="25" Height="Auto"></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <GroupBox  Grid.ColumnSpan="2" Grid.RowSpan="7" Header="Паспортные данные" HorizontalAlignment="Left" Margin="10,10,-33,0" VerticalAlignment="Top" MinHeight="184" MinWidth="194" Width="238"/>
+            <TextBlock Grid.Row="1" Margin="20,10,0,0">Серия</TextBlock>
+            <TextBlock Grid.Row="2" Margin="20,10,0,0">Номер</TextBlock>
+            <TextBlock Grid.Row="3" Margin="20,10,0,0">Личный номер</TextBlock>
+            <TextBlock Grid.Row="4" Margin="20,10,0,0">Кем выдан</TextBlock>
+            <TextBlock Grid.Row="5" Margin="20,10,0,0">Дата выдачи</TextBlock>
+            <TextBox x:Name="seria" Grid.Row="1" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,10,10,0" MaxWidth="100">
+                <TextBox.ToolTip>
+                    ХХ формат серии
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="nomerp" Grid.Row="2" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,10,10,0" MaxWidth="100" />
+            <TextBox x:Name="lichnomer" Grid.Row="3" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,10,10,0" MaxWidth="100">
+                <TextBox.ToolTip>
+                    <TextBlock TextWrapping="WrapWithOverflow">
+                    ЦЦЦЦЦЦЦ Б ЦЦЦ ББ Ц
+группы 1 2 3 4 5,
+
+где Ц - цифра от 0 до 9;
+Б - буква латинского алфавита (от A до Z);
+1-я группа: целое число из последовательности неповторяющихся случайных равномерно распределенных чисел в диапазоне от 7000000 до 7999999 включительно;
+2-я группа: символ A;
+3-я группа: номер последовательности случайных чисел;
+4-я группа: сигнатура идентификационного номера, заполняется символами PB;
+5-я группа: контрольная цифра;
+                    </TextBlock>
+                </TextBox.ToolTip>
+            </TextBox>
+            <TextBox x:Name="kemvidan" Grid.Row="4" Grid.Column="1" MinWidth="80" MaxHeight="18" Margin="0,10,10,0" MaxWidth="100"></TextBox>
+            <DatePicker x:Name="datavida" Grid.Row="5" Grid.Column="1" MinWidth="80" MaxHeight="25"  Margin="0,10,10,0" DateValidationError="DatePicker_DateValidationError" ></DatePicker>
+        </Grid>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="lblError" MaxWidth="300" Foreground="Red" TextWrapping="Wrap"></TextBlock>
+        <Button  Grid.Column="1" HorizontalAlignment="Left" Margin="4,204,0,0" VerticalAlignment="Top" MaxWidth="185"  Click="Button_Click" MinWidth="85">Добавить</Button>
+        <Button  Grid.Column="1" HorizontalAlignment="Left" Margin="125,204,0,0" VerticalAlignment="Top" MaxWidth="185"  Click="Button_Click3" MinWidth="85">Список Клиентов</Button>
+        <Button  Grid.Column="1" HorizontalAlignment="Left" Margin="136,0,0,10" VerticalAlignment="Bottom"   Click="Button_Click_2">Страхование детей</Button>
+        <Button x:Name="Obnovlen" Grid.Column="1" HorizontalAlignment="Left" Margin="6,0,0,70" VerticalAlignment="Bottom"   Click="Button_Click_OB" IsEnabled="False">Обновление</Button>
+        <Button  x:Name="Ydalen" Grid.Column="1" HorizontalAlignment="Left" Margin="126,0,0,70" VerticalAlignment="Bottom"   Click="Button_Click_YD" IsEnabled="False">Удаление</Button>
+        <Button  Grid.Column="1" HorizontalAlignment="Left" Margin="126,0,0,40" VerticalAlignment="Bottom"   Click="Button_Click_562">Страхование жизни</Button>
+        <Button  Grid.Column="1" HorizontalAlignment="Left" Margin="4,0,0,10" VerticalAlignment="Bottom"   Click="Button_Click_24">Страхование взрослых</Button>
+ 
+    </Grid>
+</Window>

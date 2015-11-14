@@ -29,36 +29,36 @@ namespace kursachV1.Interface
         string[] installs2 = new string[] { "Мужчины", "Женщины" };
         public Coverage_universal()
         {
-         /*   InitializeComponent();
-            if (Sotryd._count == 2)
-            {
+            InitializeComponent();
+            /*  if (Sotryd._count == 2)
+              {
 
-                Dost_voz.IsEnabled = false;
+                  Dost_voz.IsEnabled = false;
           
-            }
-             DateTime d1 = DateTime.Now;
-                DateTime d2 = new DateTime(2030,1,1);
-                scr.Maximum = Convert.ToInt32(d2.Year);
-                scr2.Maximum = Convert.ToInt32(d1.Year);
-                scr4.Maximum = Convert.ToInt32(d1.Day);
-                scr5.Maximum = 30;
+              }
+               DateTime d1 = DateTime.Now;
+                  DateTime d2 = new DateTime(2030,1,1);
+                  scr.Maximum = Convert.ToInt32(d2.Year);
+                  scr2.Maximum = Convert.ToInt32(d1.Year);
+                  scr4.Maximum = Convert.ToInt32(d1.Day);
+                  scr5.Maximum = 30;
             
-             int y =0;
-        for(int j=1900;j<=2000;j++)
-        {
-        installs[y] = j;
-            y++;
-        }
-             foreach (int i in installs)
-            Godrag.Items.Add(i);
-            foreach (string i in installs2)
-                pol.Items.Add(i);
-            smert.IsEnabled = false;
-            invalid.IsEnabled = false;
-            Vred_zdarov.IsEnabled = false;
-            sc = new SqlConnection(Sotryd.myConnectionString);
-           // sc = new SqlConnection(@"Data Source=PC-Maverick;Initial Catalog=Pro100;Integrated Security=True");
-            sc.Open();*/
+               int y =0;
+          for(int j=1900;j<=2000;j++)
+          {
+          installs[y] = j;
+              y++;
+          }
+               foreach (int i in installs)
+              Godrag.Items.Add(i);
+              foreach (string i in installs2)
+                  pol.Items.Add(i);
+              smert.IsEnabled = false;
+              invalid.IsEnabled = false;
+              Vred_zdarov.IsEnabled = false;
+              sc = new SqlConnection(Sotryd.myConnectionString);
+             // sc = new SqlConnection(@"Data Source=PC-Maverick;Initial Catalog=Pro100;Integrated Security=True");
+              sc.Open();*/
         }
 
 

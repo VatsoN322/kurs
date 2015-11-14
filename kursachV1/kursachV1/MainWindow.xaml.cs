@@ -23,7 +23,7 @@ namespace kursachV1
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();       
         }
 
         private void quitButton_Click(object sender, RoutedEventArgs e)
@@ -35,7 +35,26 @@ namespace kursachV1
         private void docButton_Click(object sender, RoutedEventArgs e)
         {
             menuFrame.Content = null;
-            menuFrame.NavigationService.Navigate(new Uri("/Frame/Dogovor.xaml", UriKind.Relative));
+            menuFrame.NavigationService.Navigate(new Uri("/Frame/Contract.xaml", UriKind.Relative));
+        }
+
+        private void stavkaButton_Click(object sender, RoutedEventArgs e)
+        {
+            menuFrame.Content = null;
+            menuFrame.NavigationService.Navigate(new Uri("/Frame/Wages.xaml", UriKind.Relative));
+        }
+
+        private void othersButton_Click(object sender, RoutedEventArgs e)
+        {
+            Others others = new Others();
+            others.ButtonClicked += others_Button_Click;
+            menuFrame.Content = others;
+
+        }
+        private void others_Button_Click(object sender, EventArgs e)
+        {
+            menuFrame.Content = null;
+            menuFrame.NavigationService.Navigate(new Uri("/Frame/Reports.xaml", UriKind.Relative));
         }
     }
 }
