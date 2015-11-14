@@ -102,8 +102,8 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Assets\FrameStyle.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Assets\ShinyBlue.xaml">
       <Generator>MSBuild:Compile</Generator>
