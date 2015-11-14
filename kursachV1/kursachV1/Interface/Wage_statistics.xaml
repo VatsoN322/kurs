@@ -79,7 +79,8 @@
                    <TextBox x:Name="fx"  Grid.Row="7" Grid.Column="1" Margin="15,3,0,0" MaxWidth="100" MaxHeight="25" Background="AliceBlue" TextAlignment="Center">0</TextBox>
                  
                    <TextBlock Margin="10,0,0,0" Grid.Row="8"  HorizontalAlignment="Left" TextWrapping="Wrap" MaxWidth="180" >Дата внесения записей</TextBlock>
-                   <TextBox x:Name="data"  Grid.Row="8" Grid.Column="1" Margin="15,3,0,0" MaxWidth="100" MaxHeight="25" Background="AliceBlue" TextAlignment="Center"></TextBox>
+                   
+                   <DatePicker x:Name="data" Grid.Row="8" Grid.Column="1" MaxWidth="100" MaxHeight="25"  Margin="15,3,0,0" DateValidationError="DatePicker_DateValidationError" ></DatePicker>
 
                 </Grid>
             </Grid>

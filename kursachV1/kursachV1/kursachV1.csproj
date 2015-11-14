@@ -53,6 +53,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\CommonWage.cs" />
+    <Compile Include="Classes\IAge.cs" />
+    <Compile Include="Classes\StaticClass.cs" />
+    <Compile Include="Classes\WageOfTheStatistician.cs" />
     <Compile Include="Frame\Contract.xaml.cs">
       <DependentUpon>Contract.xaml</DependentUpon>
     </Compile>
@@ -169,6 +173,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="KrutDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KrutDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -200,6 +209,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="KrutDataSet.xsc">
+      <DependentUpon>KrutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KrutDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KrutDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="KrutDataSet.xss">
+      <DependentUpon>KrutDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
